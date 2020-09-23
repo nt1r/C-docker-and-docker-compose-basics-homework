@@ -9,7 +9,7 @@ public class AliceController {
     private final WebClient webClient;
 
     public AliceController() {
-        String bobServiceHelloUrl = "http://localhost:8081/hello";
+        String bobServiceHelloUrl = "http://bob:8081/hello";
         this.webClient = WebClient.builder()
                 .baseUrl(bobServiceHelloUrl)
                 .build();

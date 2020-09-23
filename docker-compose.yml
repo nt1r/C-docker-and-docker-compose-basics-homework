@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  bob:
+    build: ./bob
+    ports:
+      - '8081:8081'
+  alice:
+    build: ./alice
+    ports:
+      - '8080:8080'
+    depends_on:
+      - bob
