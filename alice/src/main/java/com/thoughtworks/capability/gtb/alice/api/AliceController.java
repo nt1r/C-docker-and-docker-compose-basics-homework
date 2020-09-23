@@ -15,7 +15,7 @@ public class AliceController {
                 .build();
     }
 
-    @GetMapping
+    @GetMapping("/hello")
     public String sayHello() {
         return webClient.get().retrieve().bodyToMono(String.class).block();
     }
